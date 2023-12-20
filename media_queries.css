@@ -1,0 +1,16 @@
+@media (max-width: 650px) { 
+    .further_information_grid_items {
+        width: 100%;    
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        gap: 15px;
+    }
+}
+@media (max-width: 800px) {
+    .further_information_container {
+        flex-wrap: wrap;
+    }
+    .further_information_grid_items {
+        width: 100%;
+    }
+}
