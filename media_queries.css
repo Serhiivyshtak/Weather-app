@@ -1,16 +1,117 @@
-@media (max-width: 650px) { 
+@media (max-width: 500px) {
+    .further_information_chart_container {width: 100%}
+    .further_information_container {flex-wrap: wrap}   
+    .further_information_grid_items {
+        width: 100%;    
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        gap: 15px;
+    }
+    .weather_container {gap: 20px}
+    .temperature_container, .feels_like_container, .day_or_night_container {
+        width: 100%;
+        justify-content: flex-start;
+    }
+    .weather_image_container {display: none}
+    .logo {display: none}
+    .search_input {width: 90vw}
+    .show_response_button_container {width: 90vw}
+}
+
+@media (min-width: 501px) and (max-width: 800px) { 
+    .further_information_chart_container {width: 100%}
+    .further_information_container {flex-wrap: wrap}
     .further_information_grid_items {
         width: 100%;    
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr;
         gap: 15px;
     }
+    .weather_image_container, .temperature_container, .feels_like_container, .day_or_night_container {
+        width: calc(100% / 2);
+        justify-content: start;
+    }
+    .show_response_button_container {width: 70vw}
+    .search_input {width: 70vw}
 }
-@media (max-width: 800px) {
-    .further_information_container {
-        flex-wrap: wrap;
+
+@media (min-width: 801px) and (max-width: 1200px) {
+    .further_information_chart_container {width: 100%}
+    .further_information_container {flex-wrap: wrap}
+    .further_information_grid_items {width: 100%}
+}
+
+@media (min-width: 1550px) {
+        /* px-values 20%> */
+    .header_inner{width: 80%}
+    .content_area_inner{width: 80%}
+    .search_input {height: 33px}
+    .show_response_button, .cancel_button  {padding: 12px}
+    .header_inner {padding: 24px}
+    .logo {font-size: 24px}
+    .heading {font-size: 19.2px}
+    .search_button_icon {height: 36px; width: 36px}
+    .day_container, .weather_container {padding: 18px 0}
+    .weather_image {height: 120px; width: 120px}
+    .temperature_integer {font-size: 60px}
+    .feels_like_image, .day_or_night_image {height: 60px; width: 60px}
+    .further_information_container {padding-bottom: 18px}
+    .further_information_grid_items {padding-top: 12px; gap: 36px}
+    .further_information_item {
+        padding: 24px;
+        border-radius: 9.6px;
+        gap: 12px;
     }
-    .further_information_grid_items {
-        width: 100%;
+    .further_information_image {width: 48px; height: 48px}
+    .further_information_heading {font-size: 21.6px}
+}
+
+@media (min-width: 2000px) {
+    /* px-values 20%> then 1550px*/
+    .header_inner{width: 70%}
+    .content_area_inner{width: 70%}
+
+    .search_input {height: 39.6px}/**/
+    .show_response_button, .cancel_button  {padding: 14.4px}/**/
+    .header_inner {padding: 30.12px}/**/
+    .logo {font-size: 30.12px}/**/
+    .heading {font-size: 23.04px}/**/    
+    .search_button_icon {height: 43.2px; width: 43.2px}/**/
+    .day_container, .weather_container {padding: 21.6px 0}/**/
+    .weather_image {height: 144px; width: 144px}/**/
+    .temperature_integer {font-size: 72px}/**/
+    .feels_like_image, .day_or_night_image {height: 72px; width: 72px}/**/
+    .further_information_container {padding-bottom: 21.6px}/**/
+    .further_information_grid_items {padding-top: 14.4px; gap: 43.2px}/**/
+    .further_information_item {
+        padding: 30.12px;/**/
+        border-radius: 11.52px;/**/
     }
+    .further_information_image {width: 57.6px; height: 57.6px}/**/
+    .further_information_heading {font-size: 25.92px}/**/
+}
+
+@media (min-width: 2500px) {
+    /* px-values 30%> then 1800px*/
+    .header_inner{width: 60%}
+    .content_area_inner{width: 60%}
+
+    .search_input {height: 51.48px}
+    .show_response_button, .cancel_button  {padding: 18.72px}
+    .header_inner {padding: 39.15}
+    .logo {font-size: 39.15px}
+    .heading {font-size: 29.95px}    
+    .search_button_icon {height: 56.16px; width: 56.16px}
+    .day_container, .weather_container {padding: 28.08px 0}
+    .weather_image {height: 187.2px; width: 187.2px}
+    .temperature_integer {font-size: 93.6px}
+    .feels_like_image, .day_or_night_image {height: 93.6px; width: 93.6px}
+    .further_information_container {padding-bottom: 28.08px}
+    .further_information_grid_items {padding-top: 18.93.6px; gap: 56.16px}
+    .further_information_item {
+        padding: 39.15px;
+        border-radius: 14.97px;
+    }
+    .further_information_image {width: 74.88px; height: 74.88px}
+    .further_information_heading {font-size: 33.69px}
 }

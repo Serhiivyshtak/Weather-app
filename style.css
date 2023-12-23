@@ -70,6 +70,9 @@
     font-size: 20px;
     font-family: 'Pacifico', cursive;
 }
+.heading {
+    font-size: 16px;
+}
 .search_button {
     background: none;
     outline: none;
@@ -102,12 +105,13 @@
     flex-wrap: wrap;
     padding: 15px 0;
 }
-.weather_image, .temperature_container, .feels_like_container, .day_or_night_container {
+.weather_image_container, .temperature_container, .feels_like_container, .day_or_night_container {
     width: calc(100% / 4);
 }
 .weather_image {
     fill: #ec90a9;
     height: 100px;
+    width: 100px;
 }
 .temperature_container {
     display: flex;
@@ -181,7 +185,7 @@
     width: 40px;
     height: 40px;
 }
-.further_information_graphic_container {
+.further_information_chart_container {
     width: 40%;
     display: flex;
     justify-content: center;
