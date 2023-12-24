@@ -88,11 +88,12 @@
     width: 100%;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 .content_area_inner {
     width: 90%;
 }
-.day_container {
+.date_container {
     display: flex;
     justify-content: center;
     color: var(--primary_text_color);
@@ -104,11 +105,12 @@
     color: var(--primary_text_color);
     flex-wrap: wrap;
     padding: 15px 0;
+    gap: 10px   ;
 }
 .weather_image_container, .temperature_container, .feels_like_container, .day_or_night_container {
     width: calc(100% / 4);
 }
-.weather_image {
+.weather_image_container:nth-child(1) {
     fill: #ec90a9;
     height: 100px;
     width: 100px;
@@ -160,7 +162,7 @@
 
 .further_information_container {
     display: flex;
-    padding-bottom: 15px;
+    padding-bottom: 50px;
     width: 100%;
 }
 .further_information_grid_items {
@@ -178,6 +180,7 @@
     border-radius: 8px;
     display: flex;
     justify-content: center;
+    box-shadow: 0px 0px 3px #021e42;
     gap: 10px;
 }
 .further_information_image {
@@ -196,4 +199,61 @@
 .further_information_text {
     color: var(--secondary_text_color);
 
+}
+
+
+.daily_weather_container {
+    width: 100vw;
+    padding-top: 100px;
+    background: url(background.png);
+    background-size: 100vw 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.daily_weather_heading_container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+.daily_weather_heading {
+    font-size: 20px;
+    color: #ec90a9;
+}
+.daily_weather_container_inner {
+    width: 90%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 5px;
+}
+.day_container {
+    min-height: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.day_heading_container, .day_weather_image_container, .day_temperature_container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.day_date {
+    color: #193a67;
+    font-size: 16px;
+    font-weight: light;
+}
+.day_weather_image_container:nth-child(2) {
+    fill: #193a67;
+    height: 50px;
+    width: 50px;
+}
+.day_temperature {
+    color: #193a67;
+    font-size: 18px;
+    font-weight: bold;
+}
+.light {
+    font-weight: lighter;
 }
