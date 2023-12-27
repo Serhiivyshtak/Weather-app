@@ -8,7 +8,7 @@ const cancelButton = document.querySelector('#cancel_button');
 const canvas = document.querySelector('#chart').getContext('2d');
 
 async function mainfunc (city) {
-    const linkforCoordinates = `https://geocode.maps.co/search?q=${city}`;
+    const linkforCoordinates = `https://geocode.maps.co/search?q=${city}$api_key=658b4c6242e59946313956mrg437ebb    `;
 
     try {
         startLoadingAnimation();
