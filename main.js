@@ -10,7 +10,7 @@ const canvas = document.querySelector('#chart').getContext('2d');
 async function mainfunc (city) {
     const linkforCoordinates = `https://geocode.maps.co/search?q=${city}&api_key=658b4c6242e59946313956mrg437ebb`;
 
-    // try {
+    try {
         startLoadingAnimation();
 
         const fetchData1 = await fetch(linkforCoordinates)
@@ -82,10 +82,10 @@ async function mainfunc (city) {
     
             appendDataToHTML(necessaryDataForDOM);
         });
-    // } catch (err) {
-    //     writeError();
-    //     endLoadingAnimation();
-    // }
+    } catch (err) {
+        writeError();
+        endLoadingAnimation();
+    }
 }
 
 let displayImages = (data) => {
