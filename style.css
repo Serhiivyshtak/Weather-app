@@ -159,6 +159,10 @@
     width: 50px;
 }
 
+.chart {
+    width: 100%;
+}
+
 
 .further_information_container {
     display: flex;

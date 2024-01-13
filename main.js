@@ -5,7 +5,8 @@ const searchInputContainer = document.querySelector('#search_input_container');
 const searchInput = document.querySelector('#search_input');
 const showResponseButton = document.querySelector('#show_response_button');
 const cancelButton = document.querySelector('#cancel_button');
-const canvas = document.querySelector('#chart').getContext('2d');
+const canvas = document.querySelector('#chart');
+const ctx = canvas.getContext('2d');
 
 async function mainfunc (city) {
     const linkforCoordinates = `https://geocode.maps.co/search?q=${city}&api_key=658b4c6242e59946313956mrg437ebb`;
@@ -132,7 +133,7 @@ let endLoadingAnimation = () => {
 }
 
 let createChart = () => {
-    let myChart = new Chart(canvas, {
+    let myChart = new Chart(ctx, {
         type: 'bar',
         data: {
             labels: [null],
@@ -202,14 +203,29 @@ window.addEventListener('load', () => {
     }
 });
 
+window.addEventListener('resize', () => {
+    canvas.style = 'width: 100%';
+});
+
 document.addEventListener('click', (e) => {
     if (e.target === searchButton || e.target === searchButton.children[0] || e.target === searchButton.children[0].children[0]) {
         searchInputContainer.style.display = 'flex';
+        searchInput.focus();
     }
     if (e.target === cancelButton) {
         searchInputContainer.style.display = 'none';
     }
     if (e.target === showResponseButton) {
+        const typedValue = searchInput.value.trim();
+        mainfunc(typedValue);
+        searchInputContainer.style.display = 'none';
+        searchInput.value = '';
+        localStorage.setItem('city', typedValue);
+    }
+});
+
+searchInput.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') {
         const typedValue = searchInput.value.trim();
         mainfunc(typedValue);
         searchInputContainer.style.display = 'none';
